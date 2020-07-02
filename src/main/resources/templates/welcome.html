@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Welcome to My Family</title>
+
+<link rel="stylesheet"
+	th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+
+<style>
+body, html {
+	height: 100%;
+	margin: 0;
+}
+
+.bg {
+	background-image: url(images/tree.jpg);
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+</style>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand" href="#">MyFamily App</a>
+	</nav>
+
+	<main role="main" class="container">
+
+		<div class="starter-template">
+			<h1>Welcome to My Family</h1>
+			<h2>
+				<span th:text="'Hello, ' + ${message}"></span>
+			</h2>
+		</div>
+
+		<ol>
+			<li th:each="roles : ${roles}" th:text="${roles}"></li>
+		</ol>
+
+	</main>
+	<!-- /.container -->
+
+	<script type="text/javascript"
+		th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+<blockquote class="blockquote">
+	<footer class="blockquote-footer">
+		Copyright ©<cite title="Source Title">2020</cite>
+	</footer>
+</blockquote>
+</html>
